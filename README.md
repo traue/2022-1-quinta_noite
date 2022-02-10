@@ -21,4 +21,21 @@ Para a preparação do ambiente de desenvolvimento o Prof, em conjunto com a tur
 
 ## Ementa básica
 
-Nessa disciplina vamos aprender dois conceitos muito importantes da área de engenharia de software: UML e Orientação à Objetos.
+Nessa disciplina vamos aprender dois conceitos muito importantes da área de engenharia de software: UML e Orientação à Objetos, neste caso, com Java.
+
+
+## Critérios de avaliação
+
+Este professor não utiliza nenhuma prova para realizar a avaliação da turma, apenas atividades disponibilizadas durante o semestre.
+
+Teremos entre 4 e 6 atividades, todas de múltipla escolha e com prazo de ao menos 15 dias para realização.
+
+A média desta disciplina é calculada simplesmente pela média das atividades.
+
+
+## Bibliografia
+
+Seguem algumas recomendações de leitura para essa disciplina
+
+Serão informadas em breve
+
