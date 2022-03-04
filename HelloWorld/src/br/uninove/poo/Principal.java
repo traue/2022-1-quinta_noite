@@ -46,8 +46,10 @@ public class Principal {
         System.out.print("Informe sua altura: ");
         altura = sc.nextFloat();
 
-        System.out.println("Informe seu sexo: ");
-        sexo = sc.next().charAt(0); //vamos corrigir na próxima aula
+        System.out.print("Informe seu sexo: ");
+        sexo = sc.next().charAt(0); 
+        
+        //o fumante faremos na próxima aula
         
         //imprimindo os valores lidos
         System.out.println("O nome é: " + nome);
