@@ -33,3 +33,7 @@ A média desta disciplina é calculada simplesmente pela média das atividades.
 Seguem algumas recomendações de leitura para essa disciplina
 
 Serão informadas em breve.
+
+## Links interessantes
+
+- Mini tutorial sobre DCU (Diagramas de Casos de Usos): [LINK](https://www.youtube.com/watch?v=ab6eDdwS3rA)
