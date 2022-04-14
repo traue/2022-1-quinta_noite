@@ -17,7 +17,5 @@
                 </form>
             </div>
         </nav>
-        
-<!--        paramos aqui. já incluimos o GSON. Faltam as classes pojo-->
     </body>
 </html>
