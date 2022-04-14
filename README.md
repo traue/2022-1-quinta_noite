@@ -16,6 +16,15 @@ Essa disciplina requer a preparação de um ambiente de desenvolvimento (para Ja
 
 Para a preparação do ambiente de desenvolvimento o Prof, em conjunto com a turma, preparou um documento que pode ser acessaso através [DESTE LINK](https://docs.google.com/document/d/10TOoOEvHRbdrqVnQGXMQ1hXmqM72lXppzRs7W3izayM/edit?usp=sharing)
 
+## Atividades da disciplina
+
+Todas as atividades devem ser realizadas via Classroom
+
+As atividades liberadas são:
+
+- **Atividade 1**: De 14.04 até 05.05, 19h - Em andamento
+- **Atividade 2**: De 28.04 até 12.05, 19h
+
 ## Ementa básica
 
 Nessa disciplina vamos aprender dois conceitos muito importantes da área de engenharia de software: UML e Orientação à Objetos, neste caso, com Java.
