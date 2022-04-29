@@ -23,14 +23,14 @@ public class Http {
         return sb.toString();
     }
 
-    public static Clima getClima(String cidade) {
+    public static Clima getClima(String cidade, String formato) {
         try {
 
             //monta a url com seus respectivos parâmetros
             String charset = StandardCharsets.UTF_8.name();
             String apiurl = "http://api.openweathermap.org/data/2.5/weather?";
             String appid = ""; //SUA chave de API
-            String units = "metric";
+            String units = formato;
             String lang = "pt_br";
 
             String query = String.format("q=%s&appid=%s&units=%s&lang=%s",

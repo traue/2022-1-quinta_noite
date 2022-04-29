@@ -81,8 +81,8 @@ public class Clima {
         this.main = main;
     }
 
-    public Integer getVisibility() {
-        return visibility;
+    public Double getVisibility() {
+        return (double)(visibility / 1000);
     }
 
     public void setVisibility(Integer visibility) {
