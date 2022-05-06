@@ -1,3 +1,4 @@
+<%@page import="br.uninove.util.Units"%>
 <%@page import="java.text.SimpleDateFormat"%>
 <%@page import="java.util.Date"%>
 <%@page import="br.uninove.http.Http"%>
@@ -6,30 +7,23 @@
 <%
     request.setCharacterEncoding("UTF-8");
 
-    String formato = "metric";
-
-    if (request.getParameter("formato") != null) {
-        formato = request.getParameter("formato");
-    }
-    
+    Units formato = Units.metric;
     Clima clima = null;
     String cidade = "";
+    String unid_med = "ºC";
+
     if (request.getParameter("cidade") != null) {
         cidade = request.getParameter("cidade");
+
+        if (session.getAttribute("units") != null) {
+            formato = (Units) (session.getAttribute("units"));
+            if (formato.equals(Units.imperial)) {
+                unid_med = "ºF";
+            }
+        }
+
         clima = Http.getClima(cidade, formato);
     }
-
-    //SOBRE O UTC...
-//    long unixSeconds = clima.getSys().getSunrise();
-//// convert seconds to milliseconds
-//    Date date = new java.util.Date(unixSeconds * 1000L);
-//// the format of your date
-//    SimpleDateFormat sdf = new java.text.SimpleDateFormat("yyyy-MM-dd HH:mm:ss z");
-//// give a timezone reference for formatting (see comment at the bottom)
-//    //sdf.setTimeZone(java.util.TimeZone.getTimeZone("GMT-4"));
-//    String formattedDate = sdf.format(date);
-//    out.println(formattedDate);
-
 %>
 <!DOCTYPE html>
 <html>
@@ -58,15 +52,28 @@
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
                 <a class="navbar-brand" href=".">UniClima</a>
-                <form class="d-flex" method="post">
-                    <input class="form-control me-2" name="cidade" value="<%=cidade%>" type="search" placeholder="Nome da cidade" aria-label="Search">
-                    <button class="btn btn-outline-info" type="submit">Buscar</button>
-                </form>
-            </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="./">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="config.jsp">Configurações</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex" method="post">
+                        <input class="form-control me-2" name="cidade" value="<%=cidade%>" type="search" placeholder="Nome da cidade" aria-label="Search">
+                        <button class="btn btn-outline-info" type="submit">Buscar</button>
+                    </form>
+                </div>
         </nav>
 
         <!--card do clima-->
-        <% if (clima != null) {%>
+        <% if (clima
+                    != null) {%>
         <div class="container">
             <div class="row">
                 <div class="clima-card">
@@ -74,7 +81,7 @@
                         <div class="card-body meucard">
                             <div class="text-center">
                                 <img src="https://openweathermap.org/img/wn/<%=clima.getWeather().get(0).getIcon()%>@2x.png"> 
-                                <h2><%= String.format("%.1f", clima.getMain().getTemp())%>ºC</h2>
+                                <h2><%= String.format("%.1f", clima.getMain().getTemp())%> <%=unid_med%></h2>
                                 <div class="text-capitalize"><h3><%= clima.getWeather().get(0).getDescription()%></h3></div>
                                 <h5>Cidade: <%= clima.getName() + ", " + clima.getSys().getCountry()%></h5>
                             </div>
@@ -85,9 +92,9 @@
                                 </button>
                             </div>
                             <div id="collapseOne" class="collapse pt-4" aria-labelledby="headingOne" data-parent="#accordionExample">
-                                <p><strong>Sensação térmica: </strong><%= clima.getMain().getFeelsLike()%> ºC</p>
-                                <p><strong>Mínima: </strong><%= clima.getMain().getTempMin()%> ºC</p>
-                                <p><strong>Máxima </strong><%= clima.getMain().getTempMax()%> ºC</p>
+                                <p><strong>Sensação térmica: </strong><%= clima.getMain().getFeelsLike()%> <%=unid_med%></p>
+                                <p><strong>Mínima: </strong><%= clima.getMain().getTempMin()%> <%=unid_med%></p>
+                                <p><strong>Máxima </strong><%= clima.getMain().getTempMax()%> <%=unid_med%></p>
                                 <p><strong>Umidade relativa do ar: </strong><%= clima.getMain().getHumidity()%>%</p>
                                 <p><strong>Pressão atmosférica: </strong><%= clima.getMain().getPressure()%>hPa</p>
                                 <p><strong>Visibilidade: </strong><%= clima.getVisibility()%>Km</p>
@@ -99,6 +106,20 @@
                 </div>
             </div>
         </div>
+        <% } else {%>
+        <div class="container">
+            <div class="row">
+                <div class="clima-card">
+                    <div class="card">
+                        <div class="card-body meucard">
+                            <div class="text-center">
+                                <h4><%= cidade.isEmpty() ? "Informe a cidade" : "Cidade não encontrada"%></h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>           
         <% }%>
 
     </body>

@@ -1,6 +1,7 @@
 package br.uninove.http;
 
 import br.uninove.clima.Clima;
+import br.uninove.util.Units;
 import com.google.gson.Gson;
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -23,14 +24,14 @@ public class Http {
         return sb.toString();
     }
 
-    public static Clima getClima(String cidade, String formato) {
+    public static Clima getClima(String cidade, Units formato) {
         try {
 
             //monta a url com seus respectivos parâmetros
             String charset = StandardCharsets.UTF_8.name();
             String apiurl = "http://api.openweathermap.org/data/2.5/weather?";
             String appid = ""; //SUA chave de API
-            String units = formato;
+            String units = formato.name();
             String lang = "pt_br";
 
             String query = String.format("q=%s&appid=%s&units=%s&lang=%s",
@@ -63,6 +64,8 @@ public class Http {
                     clima = gson.fromJson(json, Clima.class);
                     return clima;
                 }
+            } else {
+                System.out.println(conn.getResponseCode());
             }
 
             return null;
