@@ -23,7 +23,8 @@ Todas as atividades devem ser realizadas via Classroom
 As atividades liberadas são:
 
 - **Atividade 1**: De 14.04 até 05.05, 19h - Encerrada
-- **Atividade 2**: De 28.04 até 12.05, 19h - Em andamento
+- **Atividade 2**: De 28.04 até 12.05, 19h - Encerrada
+- **Atividade 3**: De 12.05 até 02.06, 19h - Em andamento
 
 ## Ementa básica
 
