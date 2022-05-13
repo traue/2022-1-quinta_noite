@@ -1,13 +1,11 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package model;
 
-/**
- *
- * @author thiagograzianitraue
- */
 public class Reclamacao {
-    
+
+    public int id;
+    public String data;
+    public String assunto;
+    public String descricao;
+    public Cliente cliente;
+    public StatusReclamacao status;
 }

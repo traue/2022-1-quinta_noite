@@ -1,13 +1,12 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package model;
 
-/**
- *
- * @author thiagograzianitraue
- */
+import java.util.ArrayList;
+
 public class Tecnico {
-    
+
+    public int id;
+    public String nome;
+    public String departamento;
+    public ArrayList<Reclamacao> reclamacoes;
+
 }
