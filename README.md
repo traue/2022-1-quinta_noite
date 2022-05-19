@@ -25,6 +25,7 @@ As atividades liberadas são:
 - **Atividade 1**: De 14.04 até 05.05, 19h - Encerrada
 - **Atividade 2**: De 28.04 até 12.05, 19h - Encerrada
 - **Atividade 3**: De 12.05 até 02.06, 19h - Em andamento
+- **Atividade 4**: De 19.05 até 09.06, 19h - Em andamento
 
 ## Ementa básica
 
@@ -47,3 +48,11 @@ Serão informadas em breve.
 ## Links interessantes
 
 - Mini tutorial sobre DCU (Diagramas de Casos de Usos): [LINK](https://www.youtube.com/watch?v=ab6eDdwS3rA)
+
+## Não podemos esquecer
+
+- Aniversário do Jhonny: 03.06 (25 primaveras)
+- Aniversário da Michelle: 04.06 (para damas, não perguntamos idade)
+- Aniversário do Gianluca: 17.06
+- Aniversário do Daniel: 19.06 (19 aninhos)
+- Aniversário do Daniel: 22.06 (28 verões)
