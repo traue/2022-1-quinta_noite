@@ -55,4 +55,3 @@ Serão informadas em breve.
 - Aniversário da Michelle: 04.06 (para damas, não perguntamos idade)
 - Aniversário do Gianluca: 17.06
 - Aniversário do Daniel: 19.06 (19 aninhos)
-- Aniversário do Daniel: 22.06 (28 verões)
