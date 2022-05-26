@@ -26,6 +26,9 @@ As atividades liberadas são:
 - **Atividade 2**: De 28.04 até 12.05, 19h - Encerrada
 - **Atividade 3**: De 12.05 até 02.06, 19h - Em andamento
 - **Atividade 4**: De 19.05 até 09.06, 19h - Em andamento
+- **Atividade 5**: De 26.05 até 16.06, 19h - Em andamento
+
+Atividade de recuperação: 16.06 (EM AULA)
 
 ## Ementa básica
 
